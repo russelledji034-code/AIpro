@@ -142,119 +142,164 @@
   <div class="welcome">
     <h2 id="title">Bienvenue sur AIPro</h2>
     <p id="description">
-      Des outils intelligents pour entrepreneurs.
-    </p>
-  </div>
+      Des outils intelligent<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="tools">
+<title>AIPro - Assistant IA</title>
 
-    <div class="tool">
-      <h3>🤖 Assistant IA</h3>
-      <p>Pose tes questions à AIPro.</p>
-    </div>
-
-    <div class="tool">
-      <h3>✍️ Créateur de contenu</h3>
-      <p>Crée des publications rapidement.</p>
-    </div>
-
-    <div class="tool">
-      <h3>📢 Publicités</h3>
-      <p>Prépare tes annonces commerciales.</p>
-    </div>
-
-    <div class="tool">
-      <h3>💰 Bénéfices</h3>
-      <p>Calcule tes marges et bénéfices.</p>
-    </div>
-
-  </div>
-
-  <div class="chat">
-
-    <h2 id="chatTitle">💬 Parler avec AIPro</h2>
-
-    <textarea
-      id="question"
-      placeholder="Écris ta question ici..."
-    ></textarea>
-
-    <button class="send" onclick="askAI()">
-      Envoyer
-    </button>
-
-    <div id="response"></div>
-
-  </div>
-
-</div>
-
-<footer>
-  AIPro © 2026
-</footer>
-
-<script>
-
-function setLanguage(language) {
-
-  if (language === "en") {
-
-    document.getElementById("subtitle").innerText =
-      "Your AI assistant to grow your business";
-
-    document.getElementById("title").innerText =
-      "Welcome to AIPro";
-
-    document.getElementById("description").innerText =
-      "Smart tools for entrepreneurs.";
-
-    document.getElementById("chatTitle").innerText =
-      "💬 Talk with AIPro";
-
-    document.getElementById("question").placeholder =
-      "Write your question here...";
-
-  } else {
-
-    document.getElementById("subtitle").innerText =
-      "Ton assistant IA pour développer ton activité";
-
-    document.getElementById("title").innerText =
-      "Bienvenue sur AIPro";
-
-    document.getElementById("description").innerText =
-      "Des outils intelligents pour entrepreneurs.";
-
-    document.getElementById("chatTitle").innerText =
-      "💬 Parler avec AIPro";
-
-    document.getElementById("question").placeholder =
-      "Écris ta question ici...";
-  }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-function askAI() {
-
-  const question =
-    document.getElementById("question").value;
-
-  const response =
-    document.getElementById("response");
-
-  if (question.trim() === "") {
-    response.style.display = "block";
-    response.innerText =
-      "Écris d'abord une question.";
-    return;
-  }
-
-  response.style.display = "block";
-
-  response.innerText =
-    "🤖 AIPro : Ta demande a bien été reçue. La connexion à notre véritable intelligence artificielle sera ajoutée dans la prochaine étape.";
+body {
+  background: #0b0f14;
+  color: white;
+  min-height: 100vh;
 }
 
-</script>
+header {
+  background: linear-gradient(135deg, #111827, #172033);
+  padding: 28px 20px;
+  text-align: center;
+  border-bottom: 1px solid #263241;
+}
 
-</body>
-</html>'
+.logo {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header h1 {
+  margin-top: 12px;
+  font-size: 30px;
+}
+
+header p {
+  margin-top: 8px;
+  color: #aeb8c5;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.welcome {
+  background: #111827;
+  border: 1px solid #263241;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.welcome h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #aeb8c5;
+  line-height: 1.5;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tool {
+  background: #151c27;
+  border: 1px solid #263241;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.tool .icon {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.tool span {
+  color: #d7dee8;
+  font-size: 14px;
+}
+
+.chat {
+  background: #111827;
+  border: 1px solid #263241;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.chat h2 {
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  background: #0b0f14;
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #7c3aed;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.response {
+  display: none;
+  margin-top: 18px;
+  padding: 16px;
+  background: #0b0f14;
+  border-left: 4px solid #7c3aed;
+  border-radius: 10px;
+  line-height: 1.6;
+  color: #dce3ec;
+}
+
+footer {
+  text-align: center;
+  padding: 25
